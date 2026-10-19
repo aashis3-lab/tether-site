@@ -35,7 +35,7 @@ export function EmailCapture({ source, className = "" }: { source: string; class
 
   return (
     <form onSubmit={submit} className={`w-full max-w-md ${className}`}>
-      <div className="flex rounded-full bg-white p-1.5 shadow-[0_1px_2px_rgb(20_18_21/0.06),0_8px_24px_-8px_rgb(20_18_21/0.14)] ring-1 ring-line focus-within:ring-2 focus-within:ring-pink/60">
+      <div className="flex rounded-full bg-paper-2 p-1.5 lift ring-1 ring-line focus-within:ring-2 focus-within:ring-pink/60">
         <label htmlFor={`email-${source}`} className="sr-only">
           Email address
         </label>
@@ -52,7 +52,7 @@ export function EmailCapture({ source, className = "" }: { source: string; class
         <button
           type="submit"
           disabled={state === "sending"}
-          className="h-11 shrink-0 rounded-full bg-ink px-5 text-[15px] font-medium text-white transition hover:bg-ink/85 disabled:opacity-60"
+          className="h-11 shrink-0 rounded-full bg-ink px-5 text-[15px] font-medium text-paper transition hover:opacity-85 disabled:opacity-60"
         >
           {state === "sending" ? "Joining…" : "Get early access"}
         </button>
